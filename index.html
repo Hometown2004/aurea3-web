@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aurèa — Donde nace tu esencia</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;1,300;1,400;1,500&family=Work+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#f6f1e7;
+    --ink:#231f18;
+    --ink-soft:#5c5548;
+    --line:#ddd3c0;
+    --gold:#93733f;
+    --font-display:'Fraunces', serif;
+    --font-body:'Work Sans', sans-serif;
+  }
+
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+
+  body{
+    background:var(--bg);
+    color:var(--ink);
+    font-family:var(--font-body);
+    font-weight:300;
+    line-height:1.7;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  a{color:inherit; text-decoration:none;}
+
+  .wrap{
+    max-width:720px;
+    margin:0 auto;
+    padding:0 28px;
+  }
+
+  header{padding:36px 0;}
+
+  .nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+  }
+
+  .logo{
+    font-family:var(--font-display);
+    font-style:italic;
+    font-weight:400;
+    font-size:22px;
+  }
+
+  .nav-links{
+    display:flex;
+    gap:32px;
+    font-size:13px;
+    color:var(--ink-soft);
+  }
+
+  .nav-links a:hover{color:var(--ink);}
+
+  .hero{
+    padding:80px 0 100px;
+    text-align:center;
+  }
+
+  .hero p.eyebrow{
+    font-size:13px;
+    color:var(--ink-soft);
+    margin-bottom:28px;
+  }
+
+  .hero h1{
+    font-family:var(--font-display);
+    font-style:italic;
+    font-weight:300;
+    font-size:clamp(44px, 8vw, 78px);
+    line-height:1.05;
+  }
+
+  .hero p.tagline{
+    margin:26px auto 0;
+    max-width:38ch;
+    font-size:17px;
+    color:var(--ink-soft);
+  }
+
+  .hero .cta{
+    display:inline-block;
+    margin-top:38px;
+    font-size:14px;
+    padding-bottom:4px;
+    border-bottom:1px solid var(--ink);
+  }
+
+  .rule{
+    border:none;
+    border-top:1px solid var(--line);
+    max-width:720px;
+    margin:0 auto;
+  }
+
+  .historia{
+    padding:96px 0;
+    text-align:center;
+  }
+
+  .historia h2{
+    font-family:var(--font-display);
+    font-style:italic;
+    font-weight:400;
+    font-size:28px;
+    margin-bottom:26px;
+  }
+
+  .historia p{
+    max-width:52ch;
+    margin:0 auto;
+    color:var(--ink-soft);
+    font-size:16px;
+  }
+
+  .coleccion{padding:96px 0;}
+
+  .coleccion h2{
+    font-family:var(--font-display);
+    font-style:italic;
+    font-weight:400;
+    font-size:28px;
+    text-align:center;
+    margin-bottom:64px;
+  }
+
+  .products{border-bottom:1px solid var(--line); min-height:120px;}
+
+  .product{
+    display:grid;
+    grid-template-columns:1fr auto;
+    gap:6px 24px;
+    padding:30px 0;
+    border-top:1px solid var(--line);
+  }
+
+  .product-name{
+    font-family:var(--font-display);
+    font-size:21px;
+  }
+
+  .product-price{
+    font-family:var(--font-display);
+    font-size:18px;
+    color:var(--ink-soft);
+    align-self:start;
+  }
+
+  .product-price.agotado{
+    font-family:var(--font-body);
+    font-size:13px;
+    color:var(--gold);
+    letter-spacing:0.4px;
+  }
+
+  .product-notes{
+    font-size:13px;
+    color:var(--gold);
+    letter-spacing:0.3px;
+  }
+
+  .product-desc{
+    grid-column:1 / -1;
+    font-size:15px;
+    color:var(--ink-soft);
+    max-width:48ch;
+    margin-top:4px;
+  }
+
+  .catalog-status{
+    text-align:center;
+    padding:30px 0;
+    font-size:13px;
+    color:var(--ink-soft);
+  }
+
+  .pedidos{
+    padding:96px 0;
+    text-align:center;
+  }
+
+  .pedidos h2{
+    font-family:var(--font-display);
+    font-style:italic;
+    font-weight:400;
+    font-size:28px;
+    margin-bottom:22px;
+  }
+
+  .pedidos p{
+    max-width:44ch;
+    margin:0 auto 34px;
+    color:var(--ink-soft);
+    font-size:16px;
+  }
+
+  .pedidos .cta{
+    display:inline-block;
+    font-size:14px;
+    padding-bottom:4px;
+    border-bottom:1px solid var(--ink);
+  }
+
+  .steps{
+    margin-top:56px;
+    display:flex;
+    justify-content:center;
+    gap:56px;
+    flex-wrap:wrap;
+    text-align:left;
+  }
+
+  .step{max-width:180px;}
+
+  .step .n{
+    font-family:var(--font-display);
+    font-style:italic;
+    font-size:15px;
+    color:var(--gold);
+    display:block;
+    margin-bottom:8px;
+  }
+
+  .step p{
+    font-size:14px;
+    color:var(--ink-soft);
+    margin:0;
+  }
+
+  .contacto{
+    padding:96px 0;
+    text-align:center;
+  }
+
+  .contacto h2{
+    font-family:var(--font-display);
+    font-style:italic;
+    font-weight:400;
+    font-size:28px;
+    margin-bottom:32px;
+  }
+
+  .contact-lines{
+    font-size:15px;
+    color:var(--ink-soft);
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+  }
+
+  .contact-lines a:hover{color:var(--ink);}
+
+  footer{
+    padding:40px 0;
+    text-align:center;
+    font-size:12px;
+    color:var(--ink-soft);
+  }
+
+  @media (max-width: 600px){
+    .nav-links{display:none;}
+    .product{grid-template-columns:1fr;}
+    .product-price{margin-top:2px;}
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <div class="logo">Aurèa</div>
+    <nav class="nav-links">
+      <a href="#coleccion">Colección</a>
+      <a href="#pedidos">Pedidos</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <p class="eyebrow">Perfumería colombiana</p>
+    <h1>Donde nace<br>tu esencia</h1>
+    <p class="tagline">Fragancias compuestas a mano en Colombia, en pequeños lotes, con materias primas de origen botánico.</p>
+    <a class="cta" href="#coleccion">Ver la colección</a>
+  </div>
+</section>
+
+<hr class="rule">
+
+<section class="historia">
+  <div class="wrap">
+    <h2>Nace en tierra colombiana</h2>
+    <p>Cada fragancia parte de un lugar: una flor, una raíz, un paisaje. No creemos en aromas genéricos, sino en esencias con un origen claro que se puedan llevar puestas.</p>
+  </div>
+</section>
+
+<section class="coleccion" id="coleccion">
+  <div class="wrap">
+    <h2>La colección</h2>
+    <div class="products" id="products">
+      <p class="catalog-status" id="catalog-status">Cargando catálogo…</p>
+    </div>
+  </div>
+</section>
+
+<hr class="rule">
+
+<section class="pedidos" id="pedidos">
+  <div class="wrap">
+    <h2>Cómo pedir</h2>
+    <p>Los pedidos se toman por WhatsApp y se despachan a todo el país.</p>
+    <a class="cta" href="https://wa.me/573000000000?text=Hola%20Aur%C3%A8a%2C%20quiero%20hacer%20un%20pedido" target="_blank" rel="noopener">Escribir por WhatsApp</a>
+    <div class="steps">
+      <div class="step">
+        <span class="n">Uno</span>
+        <p>Elige tu fragancia, o pide una muestra de las cuatro.</p>
+      </div>
+      <div class="step">
+        <span class="n">Dos</span>
+        <p>Escríbenos con tu ciudad. Confirmamos disponibilidad y pago.</p>
+      </div>
+      <div class="step">
+        <span class="n">Tres</span>
+        <p>Despachamos por transportadora nacional a tu puerta.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="rule">
+
+<section class="contacto" id="contacto">
+  <div class="wrap">
+    <h2>Hablemos</h2>
+    <div class="contact-lines">
+      <a href="https://wa.me/573000000000" target="_blank" rel="noopener">WhatsApp — +57 300 000 0000</a>
+      <a href="mailto:hola@aurea.com.co">hola@aurea.com.co</a>
+      <span>Bogotá, Colombia · envíos a todo el país</span>
+    </div>
+  </div>
+</section>
+
+<footer>
+  Aurèa — Donde nace tu esencia · Hecho en Colombia
+</footer>
+
+<script>
+  // Reemplaza esta URL por el enlace CSV publicado desde Google Sheets
+  // (Archivo > Compartir > Publicar en la web > tipo: CSV)
+  var CATALOG_CSV_URL = "REEMPLAZAR_CON_URL_CSV_PUBLICADA";
+
+  // Catálogo de respaldo: se muestra si la hoja aún no está conectada
+  // o si la carga falla por cualquier motivo.
+  var FALLBACK_PRODUCTS = [
+    { nombre: "Ámbar", notas: "Ámbar · vainilla · sándalo", precio: 189000, stock: 12, descripcion: "Cálida y envolvente, pensada para el atardecer." },
+    { nombre: "Orquídea", notas: "Orquídea · jazmín · almizcle", precio: 189000, stock: 8, descripcion: "Floral y luminosa, con un corazón blanco que dura todo el día." },
+    { nombre: "Raíz", notas: "Vetiver · cedro · tabaco", precio: 199000, stock: 5, descripcion: "Terrosa y seca, inspirada en el monte después de la lluvia." },
+    { nombre: "Flor de Café", notas: "Flor de café · bergamota · cacao", precio: 199000, stock: 10, descripcion: "Un homenaje a la flor del café colombiano: fresca al inicio, tostada al final." }
+  ];
+
+  function parseCSV(text) {
+    var rows = [];
+    var row = [];
+    var field = "";
+    var inQuotes = false;
+
+    for (var i = 0; i < text.length; i++) {
+      var c = text[i];
+      var next = text[i + 1];
+
+      if (inQuotes) {
+        if (c === '"' && next === '"') { field += '"'; i++; }
+        else if (c === '"') { inQuotes = false; }
+        else { field += c; }
+      } else {
+        if (c === '"') { inQuotes = true; }
+        else if (c === ',') { row.push(field); field = ""; }
+        else if (c === '\n' || c === '\r') {
+          if (c === '\r' && next === '\n') i++;
+          row.push(field); field = "";
+          if (row.length > 1 || row[0] !== "") rows.push(row);
+          row = [];
+        } else { field += c; }
+      }
+    }
+    if (field.length || row.length) { row.push(field); rows.push(row); }
+    return rows;
+  }
+
+  function rowsToProducts(rows) {
+    if (!rows.length) return [];
+    var headers = rows[0].map(function (h) { return h.trim().toLowerCase(); });
+    var idx = {
+      nombre: headers.indexOf("nombre"),
+      notas: headers.indexOf("notas"),
+      precio: headers.indexOf("precio"),
+      stock: headers.indexOf("stock"),
+      descripcion: headers.indexOf("descripcion")
+    };
+    var out = [];
+    for (var i = 1; i < rows.length; i++) {
+      var r = rows[i];
+      if (!r[idx.nombre]) continue;
+      out.push({
+        nombre: (r[idx.nombre] || "").trim(),
+        notas: (r[idx.notas] || "").trim(),
+        precio: parseInt((r[idx.precio] || "0").replace(/[^0-9]/g, ""), 10) || 0,
+        stock: parseInt((r[idx.stock] || "0").replace(/[^0-9]/g, ""), 10) || 0,
+        descripcion: (r[idx.descripcion] || "").trim()
+      });
+    }
+    return out;
+  }
+
+  function formatPrice(n) {
+    return "$" + n.toLocaleString("es-CO");
+  }
+
+  function renderProducts(products, note) {
+    var container = document.getElementById("products");
+    container.innerHTML = "";
+
+    if (!products.length) {
+      var empty = document.createElement("p");
+      empty.className = "catalog-status";
+      empty.textContent = "El catálogo se está actualizando. Vuelve en unos minutos.";
+      container.appendChild(empty);
+      return;
+    }
+
+    products.forEach(function (p) {
+      var item = document.createElement("div");
+      item.className = "product";
+
+      var left = document.createElement("div");
+      var name = document.createElement("div");
+      name.className = "product-name";
+      name.textContent = p.nombre;
+      var notes = document.createElement("div");
+      notes.className = "product-notes";
+      notes.textContent = p.notas;
+      left.appendChild(name);
+      left.appendChild(notes);
+
+      var price = document.createElement("div");
+      if (p.stock > 0) {
+        price.className = "product-price";
+        price.textContent = formatPrice(p.precio);
+      } else {
+        price.className = "product-price agotado";
+        price.textContent = "Agotado";
+      }
+
+      var desc = document.createElement("p");
+      desc.className = "product-desc";
+      desc.textContent = p.descripcion;
+
+      item.appendChild(left);
+      item.appendChild(price);
+      item.appendChild(desc);
+      container.appendChild(item);
+    });
+
+    if (note) {
+      var status = document.createElement("p");
+      status.className = "catalog-status";
+      status.textContent = note;
+      container.appendChild(status);
+    }
+  }
+
+  function loadCatalog() {
+    if (!CATALOG_CSV_URL || CATALOG_CSV_URL.indexOf("REEMPLAZAR_CON_URL_CSV_PUBLICADA") !== -1) {
+      renderProducts(FALLBACK_PRODUCTS, null);
+      return;
+    }
+    fetch(CATALOG_CSV_URL)
+      .then(function (res) {
+        if (!res.ok) throw new Error("network");
+        return res.text();
+      })
+      .then(function (text) {
+        var products = rowsToProducts(parseCSV(text));
+        if (!products.length) throw new Error("empty");
+        renderProducts(products, null);
+      })
+      .catch(function () {
+        renderProducts(FALLBACK_PRODUCTS, null);
+      });
+  }
+
+  loadCatalog();
+</script>
+
+</body>
+</html>
