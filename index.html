@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Aurèa — Donde nace tu esencia</title>
+<title>Arômé — Perfumes, regalos y experiencias</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;1,300;1,400;1,500&family=Work+Sans:wght@300;400;500&display=swap" rel="stylesheet">
@@ -32,19 +32,11 @@
 
   a{color:inherit; text-decoration:none;}
 
-  .wrap{
-    max-width:720px;
-    margin:0 auto;
-    padding:0 28px;
-  }
+  .wrap{max-width:720px; margin:0 auto; padding:0 28px;}
 
   header{padding:36px 0;}
 
-  .nav{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-  }
+  .nav{display:flex; justify-content:space-between; align-items:center;}
 
   .logo{
     font-family:var(--font-display);
@@ -53,25 +45,12 @@
     font-size:22px;
   }
 
-  .nav-links{
-    display:flex;
-    gap:32px;
-    font-size:13px;
-    color:var(--ink-soft);
-  }
-
+  .nav-links{display:flex; gap:28px; font-size:13px; color:var(--ink-soft);}
   .nav-links a:hover{color:var(--ink);}
 
-  .hero{
-    padding:80px 0 100px;
-    text-align:center;
-  }
+  .hero{padding:80px 0 100px; text-align:center;}
 
-  .hero p.eyebrow{
-    font-size:13px;
-    color:var(--ink-soft);
-    margin-bottom:28px;
-  }
+  .hero p.eyebrow{font-size:13px; color:var(--ink-soft); margin-bottom:28px;}
 
   .hero h1{
     font-family:var(--font-display);
@@ -83,7 +62,7 @@
 
   .hero p.tagline{
     margin:26px auto 0;
-    max-width:38ch;
+    max-width:44ch;
     font-size:17px;
     color:var(--ink-soft);
   }
@@ -96,19 +75,12 @@
     border-bottom:1px solid var(--ink);
   }
 
-  .rule{
-    border:none;
-    border-top:1px solid var(--line);
-    max-width:720px;
-    margin:0 auto;
-  }
+  .rule{border:none; border-top:1px solid var(--line); max-width:720px; margin:0 auto;}
 
-  .historia{
-    padding:96px 0;
-    text-align:center;
-  }
+  section.section{padding:96px 0;}
+  section.section.text-center{text-align:center;}
 
-  .historia h2{
+  .section h2{
     font-family:var(--font-display);
     font-style:italic;
     font-weight:400;
@@ -116,42 +88,83 @@
     margin-bottom:26px;
   }
 
-  .historia p{
+  .section > .wrap > p.section-intro{
     max-width:52ch;
-    margin:0 auto;
+    margin:0 auto 56px;
     color:var(--ink-soft);
     font-size:16px;
+    text-align:center;
   }
 
-  .coleccion{padding:96px 0;}
+  /* ---------- Líneas ---------- */
 
-  .coleccion h2{
+  .lineas h2{text-align:center;}
+
+  .linea{
+    padding:26px 0;
+    border-top:1px solid var(--line);
+  }
+  .lineas .lineas-list{border-bottom:1px solid var(--line);}
+
+  .linea-name{
+    font-family:var(--font-display);
+    font-size:19px;
+    margin-bottom:6px;
+  }
+
+  .linea-desc{font-size:14.5px; color:var(--ink-soft); max-width:52ch;}
+
+  /* ---------- Colección ---------- */
+
+  .coleccion h2{text-align:center;}
+
+  .chips{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px 20px;
+    justify-content:center;
+    margin-bottom:56px;
+  }
+
+  .chip{
+    font-family:var(--font-body);
+    font-size:13px;
+    color:var(--ink-soft);
+    padding-bottom:3px;
+    border:none;
+    border-bottom:1px solid transparent;
+    background:none;
+    cursor:pointer;
+  }
+
+  .chip:hover{color:var(--ink);}
+  .chip.active{color:var(--ink); border-bottom-color:var(--ink);}
+
+  .products{border-bottom:1px solid var(--line); min-height:80px;}
+
+  .group-heading{
     font-family:var(--font-display);
     font-style:italic;
-    font-weight:400;
-    font-size:28px;
-    text-align:center;
-    margin-bottom:64px;
+    font-size:17px;
+    color:var(--gold);
+    margin:44px 0 2px;
   }
 
-  .products{border-bottom:1px solid var(--line); min-height:120px;}
+  .group-heading:first-child{margin-top:0;}
 
   .product{
     display:grid;
     grid-template-columns:1fr auto;
     gap:6px 24px;
-    padding:30px 0;
+    padding:26px 0;
     border-top:1px solid var(--line);
   }
 
-  .product-name{
-    font-family:var(--font-display);
-    font-size:21px;
-  }
+  .product-name{font-family:var(--font-display); font-size:20px;}
 
   .product-price{
     font-family:var(--font-display);
-    font-size:18px;
+    font-size:17px;
     color:var(--ink-soft);
     align-self:start;
   }
@@ -163,46 +176,87 @@
     letter-spacing:0.4px;
   }
 
-  .product-notes{
-    font-size:13px;
-    color:var(--gold);
-    letter-spacing:0.3px;
-  }
+  .product-notes{font-size:13px; color:var(--gold); letter-spacing:0.3px;}
 
   .product-desc{
     grid-column:1 / -1;
-    font-size:15px;
+    font-size:14.5px;
     color:var(--ink-soft);
-    max-width:48ch;
-    margin-top:4px;
+    max-width:50ch;
+    margin-top:2px;
   }
 
-  .catalog-status{
+  .catalog-status{text-align:center; padding:30px 0; font-size:13px; color:var(--ink-soft);}
+
+  /* ---------- Quiz ---------- */
+
+  .quiz-form{max-width:520px; margin:0 auto; text-align:left;}
+
+  .quiz-question{margin-bottom:30px;}
+
+  .quiz-question p.q{font-size:14px; color:var(--ink-soft); margin-bottom:14px; text-align:center;}
+
+  .quiz-options{display:flex; gap:14px; flex-wrap:wrap; justify-content:center;}
+
+  .quiz-option{
+    flex:1;
+    min-width:140px;
+    padding:14px 16px;
+    border:1px solid var(--line);
     text-align:center;
-    padding:30px 0;
-    font-size:13px;
-    color:var(--ink-soft);
+    font-size:14px;
+    cursor:pointer;
+    background:none;
+    font-family:var(--font-body);
+    color:var(--ink);
   }
 
-  .pedidos{
-    padding:96px 0;
+  .quiz-option.selected{
+    border-color:var(--ink);
+    background:rgba(147,115,63,0.08);
+  }
+
+  .quiz-submit-row{text-align:center; margin-top:8px;}
+
+  .quiz-submit{
+    font-size:14px;
+    padding-bottom:4px;
+    border-bottom:1px solid var(--ink);
+    background:none;
+    border-top:none; border-left:none; border-right:none;
+    cursor:pointer;
+    font-family:var(--font-body);
+    color:var(--ink);
+  }
+
+  .quiz-result{
+    margin-top:44px;
     text-align:center;
+    display:none;
   }
 
-  .pedidos h2{
+  .quiz-result.show{display:block;}
+
+  .quiz-result p.result-text{
     font-family:var(--font-display);
     font-style:italic;
-    font-weight:400;
-    font-size:28px;
-    margin-bottom:22px;
+    font-size:21px;
+    max-width:34ch;
+    margin:0 auto 20px;
   }
 
-  .pedidos p{
-    max-width:44ch;
-    margin:0 auto 34px;
-    color:var(--ink-soft);
-    font-size:16px;
+  .quiz-result .cta{
+    display:inline-block;
+    font-size:14px;
+    padding-bottom:4px;
+    border-bottom:1px solid var(--ink);
   }
+
+  /* ---------- Pedidos ---------- */
+
+  .pedidos h2, .pedidos p{text-align:center;}
+
+  .pedidos p{max-width:44ch; margin:0 auto 34px; color:var(--ink-soft); font-size:16px;}
 
   .pedidos .cta{
     display:inline-block;
@@ -211,14 +265,7 @@
     border-bottom:1px solid var(--ink);
   }
 
-  .steps{
-    margin-top:56px;
-    display:flex;
-    justify-content:center;
-    gap:56px;
-    flex-wrap:wrap;
-    text-align:left;
-  }
+  .steps{margin-top:56px; display:flex; justify-content:center; gap:56px; flex-wrap:wrap; text-align:left;}
 
   .step{max-width:180px;}
 
@@ -231,24 +278,11 @@
     margin-bottom:8px;
   }
 
-  .step p{
-    font-size:14px;
-    color:var(--ink-soft);
-    margin:0;
-  }
+  .step p{font-size:14px; color:var(--ink-soft); margin:0;}
 
-  .contacto{
-    padding:96px 0;
-    text-align:center;
-  }
+  /* ---------- Contacto ---------- */
 
-  .contacto h2{
-    font-family:var(--font-display);
-    font-style:italic;
-    font-weight:400;
-    font-size:28px;
-    margin-bottom:32px;
-  }
+  .contacto h2{text-align:center;}
 
   .contact-lines{
     font-size:15px;
@@ -256,21 +290,18 @@
     display:flex;
     flex-direction:column;
     gap:10px;
+    text-align:center;
   }
 
   .contact-lines a:hover{color:var(--ink);}
 
-  footer{
-    padding:40px 0;
-    text-align:center;
-    font-size:12px;
-    color:var(--ink-soft);
-  }
+  footer{padding:40px 0; text-align:center; font-size:12px; color:var(--ink-soft);}
 
   @media (max-width: 600px){
     .nav-links{display:none;}
     .product{grid-template-columns:1fr;}
     .product-price{margin-top:2px;}
+    .quiz-options{flex-direction:column;}
   }
 
   @media (prefers-reduced-motion: reduce){
@@ -282,9 +313,11 @@
 
 <header>
   <div class="wrap nav">
-    <div class="logo">Aurèa</div>
+    <div class="logo">Arômé</div>
     <nav class="nav-links">
+      <a href="#lineas">Líneas</a>
       <a href="#coleccion">Colección</a>
+      <a href="#quiz">Quiz</a>
       <a href="#pedidos">Pedidos</a>
       <a href="#contacto">Contacto</a>
     </nav>
@@ -293,25 +326,55 @@
 
 <section class="hero">
   <div class="wrap">
-    <p class="eyebrow">Perfumería colombiana</p>
-    <h1>Donde nace<br>tu esencia</h1>
-    <p class="tagline">Fragancias compuestas a mano en Colombia, en pequeños lotes, con materias primas de origen botánico.</p>
+    <p class="eyebrow">Perfumes, regalos y experiencias · Colombia</p>
+    <h1>Arômé</h1>
+    <p class="tagline">Perfumes, cuidado corporal, velas y regalos curados a mano en Colombia — para cada persona y cada ocasión.</p>
     <a class="cta" href="#coleccion">Ver la colección</a>
   </div>
 </section>
 
 <hr class="rule">
 
-<section class="historia">
+<section class="section lineas" id="lineas">
   <div class="wrap">
-    <h2>Nace en tierra colombiana</h2>
-    <p>Cada fragancia parte de un lugar: una flor, una raíz, un paisaje. No creemos en aromas genéricos, sino en esencias con un origen claro que se puedan llevar puestas.</p>
+    <h2>Nuestras líneas</h2>
+    <p class="section-intro">Seis formas de vivir Arômé, desde el perfume que te define hasta el regalo que no vas a olvidar.</p>
+    <div class="lineas-list">
+      <div class="linea">
+        <div class="linea-name">Perfumes nicho / inspirados premium</div>
+        <div class="linea-desc">Fragancias de autor y versiones inspiradas de alta calidad, en formato completo o decant.</div>
+      </div>
+      <div class="linea">
+        <div class="linea-name">Regalos personalizados premium</div>
+        <div class="linea-desc">Tarjetas, empaques y combinaciones armadas a la medida de quien vas a sorprender.</div>
+      </div>
+      <div class="linea">
+        <div class="linea-name">Perfumes + body care + kits</div>
+        <div class="linea-desc">Perfume, body mist y crema corporal en la misma familia olfativa, listos para regalar o regalarte.</div>
+      </div>
+      <div class="linea">
+        <div class="linea-name">Beauty box femenina</div>
+        <div class="linea-desc">Cajas curadas pensadas en la experiencia completa: fragancia, cuidado y un detalle extra.</div>
+      </div>
+      <div class="linea">
+        <div class="linea-name">Perfumería masculina + accesorios</div>
+        <div class="linea-desc">Fragancias y accesorios seleccionados para regalar o para el día a día de él.</div>
+      </div>
+      <div class="linea">
+        <div class="linea-name">Aromatización de hogar</div>
+        <div class="linea-desc">Velas y difusores para llevar la esencia Arômé más allá de la piel.</div>
+      </div>
+    </div>
   </div>
 </section>
 
-<section class="coleccion" id="coleccion">
+<hr class="rule">
+
+<section class="section coleccion" id="coleccion">
   <div class="wrap">
     <h2>La colección</h2>
+    <p class="section-intro">Filtra por tipo de producto o por a quién va dirigido el regalo.</p>
+    <div class="chips" id="chips"></div>
     <div class="products" id="products">
       <p class="catalog-status" id="catalog-status">Cargando catálogo…</p>
     </div>
@@ -320,15 +383,67 @@
 
 <hr class="rule">
 
-<section class="pedidos" id="pedidos">
+<section class="section text-center" id="quiz">
+  <div class="wrap">
+    <h2>¿Qué perfume eres?</h2>
+    <p class="section-intro">Responde estas cuatro preguntas y descubre tu perfil olfativo.</p>
+    <div class="quiz-form" id="quiz-form">
+
+      <div class="quiz-question" data-question="1">
+        <p class="q">¿Dulce o fresco?</p>
+        <div class="quiz-options">
+          <button type="button" class="quiz-option" data-answer="dulce">Dulce</button>
+          <button type="button" class="quiz-option" data-answer="fresco">Fresco</button>
+        </div>
+      </div>
+
+      <div class="quiz-question" data-question="2">
+        <p class="q">¿Elegante o sensual?</p>
+        <div class="quiz-options">
+          <button type="button" class="quiz-option" data-answer="elegante">Elegante</button>
+          <button type="button" class="quiz-option" data-answer="sensual">Sensual</button>
+        </div>
+      </div>
+
+      <div class="quiz-question" data-question="3">
+        <p class="q">¿Día o noche?</p>
+        <div class="quiz-options">
+          <button type="button" class="quiz-option" data-answer="día">Día</button>
+          <button type="button" class="quiz-option" data-answer="noche">Noche</button>
+        </div>
+      </div>
+
+      <div class="quiz-question" data-question="4">
+        <p class="q">¿Discreto o intenso?</p>
+        <div class="quiz-options">
+          <button type="button" class="quiz-option" data-answer="discreto">Discreto</button>
+          <button type="button" class="quiz-option" data-answer="intenso">Intenso</button>
+        </div>
+      </div>
+
+      <div class="quiz-submit-row">
+        <button type="button" class="quiz-submit" id="quiz-submit">Ver mi resultado</button>
+      </div>
+
+      <div class="quiz-result" id="quiz-result">
+        <p class="result-text" id="quiz-result-text"></p>
+        <a class="cta" href="#coleccion">Descubre tu colección</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="rule">
+
+<section class="section pedidos" id="pedidos">
   <div class="wrap">
     <h2>Cómo pedir</h2>
     <p>Los pedidos se toman por WhatsApp y se despachan a todo el país.</p>
-    <a class="cta" href="https://wa.me/573000000000?text=Hola%20Aur%C3%A8a%2C%20quiero%20hacer%20un%20pedido" target="_blank" rel="noopener">Escribir por WhatsApp</a>
+    <a class="cta" href="https://wa.me/573000000000?text=Hola%20Ar%C3%B4m%C3%A9%2C%20quiero%20hacer%20un%20pedido" target="_blank" rel="noopener">Escribir por WhatsApp</a>
     <div class="steps">
       <div class="step">
         <span class="n">Uno</span>
-        <p>Elige tu fragancia, o pide una muestra de las cuatro.</p>
+        <p>Elige tu producto, box o regalo en la colección.</p>
       </div>
       <div class="step">
         <span class="n">Dos</span>
@@ -344,34 +459,64 @@
 
 <hr class="rule">
 
-<section class="contacto" id="contacto">
+<section class="section contacto" id="contacto">
   <div class="wrap">
     <h2>Hablemos</h2>
     <div class="contact-lines">
       <a href="https://wa.me/573000000000" target="_blank" rel="noopener">WhatsApp — +57 300 000 0000</a>
-      <a href="mailto:hola@aurea.com.co">hola@aurea.com.co</a>
+      <a href="mailto:hola@arome.com.co">hola@arome.com.co</a>
       <span>Bogotá, Colombia · envíos a todo el país</span>
     </div>
   </div>
 </section>
 
 <footer>
-  Aurèa — Donde nace tu esencia · Hecho en Colombia
+  Arômé — Perfumes, regalos y experiencias · Hecho en Colombia
 </footer>
 
 <script>
   // Reemplaza esta URL por el enlace CSV publicado desde Google Sheets
-  // (Archivo > Compartir > Publicar en la web > tipo: CSV)
   var CATALOG_CSV_URL = "REEMPLAZAR_CON_URL_CSV_PUBLICADA";
 
-  // Catálogo de respaldo: se muestra si la hoja aún no está conectada
-  // o si la carga falla por cualquier motivo.
+  var CATEGORY_ORDER = ["Perfumes", "Body care", "Hogar", "Detalles", "Boxes"];
+
   var FALLBACK_PRODUCTS = [
-    { nombre: "Ámbar", notas: "Ámbar · vainilla · sándalo", precio: 189000, stock: 12, descripcion: "Cálida y envolvente, pensada para el atardecer." },
-    { nombre: "Orquídea", notas: "Orquídea · jazmín · almizcle", precio: 189000, stock: 8, descripcion: "Floral y luminosa, con un corazón blanco que dura todo el día." },
-    { nombre: "Raíz", notas: "Vetiver · cedro · tabaco", precio: 199000, stock: 5, descripcion: "Terrosa y seca, inspirada en el monte después de la lluvia." },
-    { nombre: "Flor de Café", notas: "Flor de café · bergamota · cacao", precio: 199000, stock: 10, descripcion: "Un homenaje a la flor del café colombiano: fresca al inicio, tostada al final." }
+    { categoria: "Perfumes", nombre: "Ámbar", notas: "Ámbar · vainilla · sándalo", precio: 189000, stock: 12, etiquetas: "para ella", descripcion: "Cálida y envolvente, pensada para el atardecer." },
+    { categoria: "Perfumes", nombre: "Orquídea", notas: "Orquídea · jazmín · almizcle", precio: 189000, stock: 8, etiquetas: "para ella", descripcion: "Floral y luminosa, con un corazón blanco que dura todo el día." },
+    { categoria: "Perfumes", nombre: "Raíz", notas: "Vetiver · cedro · tabaco", precio: 199000, stock: 5, etiquetas: "para él", descripcion: "Terrosa y seca, inspirada en el monte después de la lluvia." },
+    { categoria: "Perfumes", nombre: "Flor de Café", notas: "Flor de café · bergamota · cacao", precio: 199000, stock: 10, etiquetas: "premium", descripcion: "Un homenaje a la flor del café colombiano: fresca al inicio, tostada al final." },
+    { categoria: "Perfumes", nombre: "Decant 5 ml", notas: "Cualquier fragancia de la colección", precio: 35000, stock: 20, etiquetas: "", descripcion: "Prueba una fragancia antes de llevarla completa." },
+    { categoria: "Perfumes", nombre: "Decant 10 ml", notas: "Cualquier fragancia de la colección", precio: 55000, stock: 20, etiquetas: "", descripcion: "El tamaño ideal para el bolso o el cajón de noche." },
+    { categoria: "Body care", nombre: "Body Mist Ámbar", notas: "Bruma corporal", precio: 65000, stock: 10, etiquetas: "para ella", descripcion: "Refresca la fragancia Ámbar durante todo el día." },
+    { categoria: "Body care", nombre: "Crema Corporal Orquídea", notas: "Hidratación diaria", precio: 58000, stock: 10, etiquetas: "para ella", descripcion: "Piel hidratada con el aroma de Orquídea." },
+    { categoria: "Hogar", nombre: "Vela Aromática Vainilla", notas: "40 horas de quemado", precio: 45000, stock: 15, etiquetas: "", descripcion: "Aromatiza cualquier espacio con una base cálida de vainilla." },
+    { categoria: "Hogar", nombre: "Difusor de Varillas Sándalo", notas: "Aromatización pasiva", precio: 89000, stock: 8, etiquetas: "", descripcion: "Aroma constante sin necesidad de fuego ni electricidad." },
+    { categoria: "Detalles", nombre: "Jabón Artesanal Ámbar", notas: "Jabón sólido", precio: 18000, stock: 25, etiquetas: "", descripcion: "Jabón artesanal con el mismo perfil aromático de Ámbar." },
+    { categoria: "Detalles", nombre: "Tarjeta Personalizada", notas: "Mensaje a mano", precio: 8000, stock: 50, etiquetas: "", descripcion: "Escribimos tu mensaje a mano en cada tarjeta." },
+    { categoria: "Detalles", nombre: "Caja de Regalo Arômé", notas: "Empaque premium", precio: 25000, stock: 30, etiquetas: "", descripcion: "El empaque que hace que cualquier detalle se sienta especial." },
+    { categoria: "Boxes", nombre: "Box Glow", notas: "Lifting de pestañas + diseño de cejas + mini perfume", precio: 150000, stock: 6, etiquetas: "para ella, premium", descripcion: "Una experiencia de belleza completa, con fragancia incluida." },
+    { categoria: "Boxes", nombre: "Box Self Love", notas: "Perfume + body mist + vela + tarjeta", precio: 175000, stock: 6, etiquetas: "para ella, premium", descripcion: "Un ritual completo para regalarte a ti misma." },
+    { categoria: "Boxes", nombre: "Box Él", notas: "Perfume + billetera + accesorio + tarjeta", precio: 185000, stock: 6, etiquetas: "para él, premium", descripcion: "El regalo listo para él, sin tener que pensarlo." },
+    { categoria: "Boxes", nombre: "Box Ella", notas: "Perfume + body mist + vela + accesorio", precio: 185000, stock: 6, etiquetas: "para ella, premium", descripcion: "Fragancia, cuidado y un detalle extra en una sola caja." },
+    { categoria: "Boxes", nombre: "Box Aniversario", notas: "Perfume para él + perfume para ella + chocolates + tarjeta", precio: 350000, stock: 4, etiquetas: "premium", descripcion: "Para celebrar en pareja, con un perfume para cada uno." }
   ];
+
+  var CHIPS = [
+    { label: "Todos", type: "all" },
+    { label: "Perfumes", type: "categoria", value: "Perfumes" },
+    { label: "Body care", type: "categoria", value: "Body care" },
+    { label: "Hogar", type: "categoria", value: "Hogar" },
+    { label: "Detalles", type: "categoria", value: "Detalles" },
+    { label: "Boxes", type: "categoria", value: "Boxes" },
+    { label: "Para él", type: "tag", value: "para él" },
+    { label: "Para ella", type: "tag", value: "para ella" },
+    { label: "Bajo $50.000", type: "price", max: 50000 },
+    { label: "Bajo $100.000", type: "price", max: 100000 },
+    { label: "Premium", type: "premium" }
+  ];
+
+  var currentProducts = FALLBACK_PRODUCTS;
+  var activeChip = 0;
 
   function parseCSV(text) {
     var rows = [];
@@ -406,10 +551,12 @@
     if (!rows.length) return [];
     var headers = rows[0].map(function (h) { return h.trim().toLowerCase(); });
     var idx = {
+      categoria: headers.indexOf("categoria"),
       nombre: headers.indexOf("nombre"),
       notas: headers.indexOf("notas"),
       precio: headers.indexOf("precio"),
       stock: headers.indexOf("stock"),
+      etiquetas: headers.indexOf("etiquetas"),
       descripcion: headers.indexOf("descripcion")
     };
     var out = [];
@@ -417,10 +564,12 @@
       var r = rows[i];
       if (!r[idx.nombre]) continue;
       out.push({
+        categoria: (r[idx.categoria] || "").trim(),
         nombre: (r[idx.nombre] || "").trim(),
         notas: (r[idx.notas] || "").trim(),
         precio: parseInt((r[idx.precio] || "0").replace(/[^0-9]/g, ""), 10) || 0,
         stock: parseInt((r[idx.stock] || "0").replace(/[^0-9]/g, ""), 10) || 0,
+        etiquetas: (r[idx.etiquetas] || "").trim(),
         descripcion: (r[idx.descripcion] || "").trim()
       });
     }
@@ -431,62 +580,96 @@
     return "$" + n.toLocaleString("es-CO");
   }
 
-  function renderProducts(products, note) {
+  function matchesChip(p, chip) {
+    if (chip.type === "all") return true;
+    if (chip.type === "categoria") return p.categoria === chip.value;
+    if (chip.type === "tag") return (p.etiquetas || "").toLowerCase().indexOf(chip.value) !== -1;
+    if (chip.type === "price") return p.precio > 0 && p.precio <= chip.max;
+    if (chip.type === "premium") return (p.etiquetas || "").toLowerCase().indexOf("premium") !== -1 || p.precio >= 150000;
+    return true;
+  }
+
+  function renderChips() {
+    var container = document.getElementById("chips");
+    container.innerHTML = "";
+    CHIPS.forEach(function (chip, i) {
+      var btn = document.createElement("button");
+      btn.type = "button";
+      btn.className = "chip" + (i === activeChip ? " active" : "");
+      btn.textContent = chip.label;
+      btn.addEventListener("click", function () {
+        activeChip = i;
+        renderChips();
+        renderProducts(currentProducts);
+      });
+      container.appendChild(btn);
+    });
+  }
+
+  function renderProducts(products) {
+    currentProducts = products;
     var container = document.getElementById("products");
     container.innerHTML = "";
 
-    if (!products.length) {
+    var chip = CHIPS[activeChip];
+    var filtered = products.filter(function (p) { return matchesChip(p, chip); });
+
+    if (!filtered.length) {
       var empty = document.createElement("p");
       empty.className = "catalog-status";
-      empty.textContent = "El catálogo se está actualizando. Vuelve en unos minutos.";
+      empty.textContent = "No hay productos en esta categoría todavía.";
       container.appendChild(empty);
       return;
     }
 
-    products.forEach(function (p) {
-      var item = document.createElement("div");
-      item.className = "product";
+    CATEGORY_ORDER.forEach(function (cat) {
+      var items = filtered.filter(function (p) { return p.categoria === cat; });
+      if (!items.length) return;
 
-      var left = document.createElement("div");
-      var name = document.createElement("div");
-      name.className = "product-name";
-      name.textContent = p.nombre;
-      var notes = document.createElement("div");
-      notes.className = "product-notes";
-      notes.textContent = p.notas;
-      left.appendChild(name);
-      left.appendChild(notes);
+      var heading = document.createElement("div");
+      heading.className = "group-heading";
+      heading.textContent = cat;
+      container.appendChild(heading);
 
-      var price = document.createElement("div");
-      if (p.stock > 0) {
-        price.className = "product-price";
-        price.textContent = formatPrice(p.precio);
-      } else {
-        price.className = "product-price agotado";
-        price.textContent = "Agotado";
-      }
+      items.forEach(function (p) {
+        var item = document.createElement("div");
+        item.className = "product";
 
-      var desc = document.createElement("p");
-      desc.className = "product-desc";
-      desc.textContent = p.descripcion;
+        var left = document.createElement("div");
+        var name = document.createElement("div");
+        name.className = "product-name";
+        name.textContent = p.nombre;
+        var notes = document.createElement("div");
+        notes.className = "product-notes";
+        notes.textContent = p.notas;
+        left.appendChild(name);
+        left.appendChild(notes);
 
-      item.appendChild(left);
-      item.appendChild(price);
-      item.appendChild(desc);
-      container.appendChild(item);
+        var price = document.createElement("div");
+        if (p.stock > 0) {
+          price.className = "product-price";
+          price.textContent = formatPrice(p.precio);
+        } else {
+          price.className = "product-price agotado";
+          price.textContent = "Agotado";
+        }
+
+        var desc = document.createElement("p");
+        desc.className = "product-desc";
+        desc.textContent = p.descripcion;
+
+        item.appendChild(left);
+        item.appendChild(price);
+        item.appendChild(desc);
+        container.appendChild(item);
+      });
     });
-
-    if (note) {
-      var status = document.createElement("p");
-      status.className = "catalog-status";
-      status.textContent = note;
-      container.appendChild(status);
-    }
   }
 
   function loadCatalog() {
+    renderChips();
     if (!CATALOG_CSV_URL || CATALOG_CSV_URL.indexOf("REEMPLAZAR_CON_URL_CSV_PUBLICADA") !== -1) {
-      renderProducts(FALLBACK_PRODUCTS, null);
+      renderProducts(FALLBACK_PRODUCTS);
       return;
     }
     fetch(CATALOG_CSV_URL)
@@ -497,14 +680,39 @@
       .then(function (text) {
         var products = rowsToProducts(parseCSV(text));
         if (!products.length) throw new Error("empty");
-        renderProducts(products, null);
+        renderProducts(products);
       })
       .catch(function () {
-        renderProducts(FALLBACK_PRODUCTS, null);
+        renderProducts(FALLBACK_PRODUCTS);
       });
   }
 
   loadCatalog();
+
+  // ---------- Quiz ----------
+  var quizAnswers = {};
+
+  document.querySelectorAll(".quiz-question").forEach(function (q) {
+    var qNum = q.getAttribute("data-question");
+    q.querySelectorAll(".quiz-option").forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        q.querySelectorAll(".quiz-option").forEach(function (b) { b.classList.remove("selected"); });
+        btn.classList.add("selected");
+        quizAnswers[qNum] = btn.getAttribute("data-answer");
+      });
+    });
+  });
+
+  document.getElementById("quiz-submit").addEventListener("click", function () {
+    var a1 = quizAnswers["1"] || "dulce";
+    var a2 = quizAnswers["2"] || "elegante";
+    var a3 = quizAnswers["3"] || "día";
+    var a4 = quizAnswers["4"] || "discreto";
+
+    var text = "Eres una fragancia " + a1 + ", " + a2 + ", para el " + a3 + " e " + a4 + ".";
+    document.getElementById("quiz-result-text").textContent = text;
+    document.getElementById("quiz-result").classList.add("show");
+  });
 </script>
 
 </body>
