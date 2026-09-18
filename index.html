@@ -237,11 +237,19 @@
 
   .quiz-result.show{display:block;}
 
+  .quiz-result p.result-name{
+    font-size:12px;
+    letter-spacing:1.5px;
+    text-transform:uppercase;
+    color:var(--gold);
+    margin-bottom:14px;
+  }
+
   .quiz-result p.result-text{
     font-family:var(--font-display);
     font-style:italic;
     font-size:21px;
-    max-width:34ch;
+    max-width:38ch;
     margin:0 auto 20px;
   }
 
@@ -426,8 +434,9 @@
       </div>
 
       <div class="quiz-result" id="quiz-result">
+        <p class="result-name" id="quiz-result-name"></p>
         <p class="result-text" id="quiz-result-text"></p>
-        <a class="cta" href="#coleccion">Descubre tu colección</a>
+        <a class="cta" href="#coleccion" id="quiz-cta">Descubre tu colección</a>
       </div>
     </div>
   </div>
@@ -703,15 +712,58 @@
     });
   });
 
+  var QUIZ_PERSONAS = {
+    "día_discreto": {
+      nombre: "Alma Luminosa",
+      dulce_elegante: "Dulzura contenida que se revela solo de cerca, como una mañana clara. Prefieres dejar una huella suave, casi un secreto.",
+      dulce_sensual: "Una calidez dulce que se asoma poco a poco, como el sol entrando por la ventana. Discreta, pero imposible de ignorar del todo.",
+      fresco_elegante: "Frescura limpia y contenida, como el aire después de la lluvia. Tu presencia es serena, nunca impuesta.",
+      fresco_sensual: "Fresca por fuera, cálida por dentro, como una brisa que guarda un secreto. Dejas una huella ligera pero memorable."
+    },
+    "día_intenso": {
+      nombre: "Fuerza Solar",
+      dulce_elegante: "Dulzura con carácter, una presencia que se hace notar sin perder la compostura. Brillas, pero con clase.",
+      dulce_sensual: "Una dulzura envolvente que no pide permiso para llenar el espacio. Cálida, magnética, imposible de pasar por alto.",
+      fresco_elegante: "Energía fresca y directa, con la seguridad de quien no necesita levantar la voz. Presente, pero siempre elegante.",
+      fresco_sensual: "Frescura intensa que se siente antes de verte llegar. Segura de ti misma, con un toque de fuego bajo la piel."
+    },
+    "noche_discreto": {
+      nombre: "Misterio Sutil",
+      dulce_elegante: "Dulzura que se guarda para quien se acerca lo suficiente. Elegante en la sombra, nunca en el centro.",
+      dulce_sensual: "Una calidez dulce que se insinúa en la penumbra, sin prisa por revelarse del todo.",
+      fresco_elegante: "Frescura contenida que se vuelve intrigante al caer la noche. Discreta, pero con un aire que no se olvida.",
+      fresco_sensual: "Fresca y esquiva, como una conversación a media voz. Dejas más preguntas que respuestas."
+    },
+    "noche_intenso": {
+      nombre: "Fuego Nocturno",
+      dulce_elegante: "Dulzura profunda con carácter, una presencia que se queda en la memoria de quien la cruza. Intensa, pero nunca excesiva.",
+      dulce_sensual: "Una calidez dulce y envolvente que domina la noche sin esfuerzo. Magnética, memorable, inolvidable.",
+      fresco_elegante: "Intensidad fresca con actitud, como una entrada que no pasa desapercibida. Fuerte, pero siempre con estilo.",
+      fresco_sensual: "Fuego bajo una capa fresca, una contradicción que atrapa. Intensa de principio a fin."
+    }
+  };
+
   document.getElementById("quiz-submit").addEventListener("click", function () {
     var a1 = quizAnswers["1"] || "dulce";
     var a2 = quizAnswers["2"] || "elegante";
     var a3 = quizAnswers["3"] || "día";
     var a4 = quizAnswers["4"] || "discreto";
 
-    var text = "Eres una fragancia " + a1 + ", " + a2 + ", para el " + a3 + " e " + a4 + ".";
-    document.getElementById("quiz-result-text").textContent = text;
+    var persona = QUIZ_PERSONAS[a3 + "_" + a4];
+    var texto = persona[a1 + "_" + a2];
+
+    document.getElementById("quiz-result-name").textContent = persona.nombre;
+    document.getElementById("quiz-result-text").textContent = texto;
     document.getElementById("quiz-result").classList.add("show");
+
+    var cta = document.getElementById("quiz-cta");
+    cta.onclick = function () {
+      if (a3 === "noche" && a4 === "intenso") {
+        activeChip = CHIPS.findIndex(function (c) { return c.type === "premium"; });
+        renderChips();
+        renderProducts(currentProducts);
+      }
+    };
   });
 </script>
 
